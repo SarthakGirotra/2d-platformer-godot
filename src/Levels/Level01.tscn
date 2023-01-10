@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/background.png" type="Texture" id=2]
@@ -7,12 +7,20 @@
 [ext_resource path="res://src/Levels/Level02.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=8]
 
-[node name="LevelTemp" type="Node2D"]
+[node name="Level01" type="Node2D"]
 position = Vector2( 0, -2 )
 __meta__ = {
 "_edit_vertical_guides_": [ 2704.0, 3000.0 ]
 }
+
+[node name="UserInterface2" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="UserInterface" parent="UserInterface2" instance=ExtResource( 8 )]
+margin_top = -2.0
+margin_bottom = -2.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

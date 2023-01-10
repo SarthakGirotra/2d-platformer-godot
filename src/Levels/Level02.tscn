@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -6,11 +6,20 @@
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Screens/EndScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=9]
 
-[node name="LevelTemp" type="Node2D"]
+[node name="Leve02" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ 2704.0, 6730.0 ]
 }
+
+[node name="UserInterface2" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="UserInterface" parent="UserInterface2" instance=ExtResource( 9 )]
+margin_top = -2.0
+margin_bottom = -2.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -90,5 +99,6 @@ position = Vector2( 5449, 121 )
 
 [node name="Portal2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5655, 212 )
+next_scene = ExtResource( 7 )
 
 [editable path="Player"]

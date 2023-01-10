@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.0
+margin_top = 117.0
+margin_right = 152.0
+margin_bottom = 131.0
+text = "2D Platformer"
+align = 1
